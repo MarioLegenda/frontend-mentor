@@ -1,0 +1,155 @@
+/**
+    BASE CSS
+ */
+
+body {
+    min-height: 100vh;
+    min-width: 320px;
+
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, hsl(273, 75%, 66%) 0%, hsl(273, 75%, 66%) 100%);
+}
+
+:root {
+    --unit-px: 5px;
+    --unit-prc: 5%;
+
+    --font-size-base: 2px;
+    --line-height-base: 2px;
+
+    font-family: "Roboto Light", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+
+    -webkit-font-feature-settings: "ss02" 1;
+    -moz-font-feature-settings:    "ss02" 1;
+    -ms-font-feature-settings:     "ss02" 1;
+    font-feature-settings: 'ss02' 1;
+
+    --screen-xs: 320px;
+
+    --primary-text-color: hsl(237, 12%, 33%);
+    --secondary-text-color: hsl(240, 6%, 50%);
+    --util-text-color: hsl(240, 5%, 91%);
+
+    --main-font: 'Kumbh Sans', sans-serif;
+}
+
+
+
+
+
+/**
+
+   OUTLINE
+
+ */
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+
+    padding: 5%;
+
+    font-size: calc(var(--font-size-base) * 12);
+
+    font-family: var(--main-font);
+}
+
+.body {
+    background: white;
+    position: relative;
+}
+
+/** Base elements */
+@media all and (min-width: 375px) {
+    .body {
+        margin-top: calc(var(--unit-prc) * 4);
+        border-radius: calc(var(--unit-px) * 5);
+        padding: var(--unit-prc)
+    }
+
+    .body__content {
+        margin-top: 150px;
+    }
+
+    .body--title {
+        text-align: center;
+        color: var(--primary-text-color);
+        font-size: calc(var(--unit-px) * 7);
+        margin-bottom: calc(var(--unit-px) * 10);
+    }
+}
+
+/** Illustration */
+@media all and (min-width: 375px) {
+    .body__base-image {
+        width: 320px;
+        top: -130px;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, 0);
+    }
+
+    .body__base-image img {
+        width: 100%;
+    }
+
+    .body__base-image .base-image--mobile {
+        position: absolute;
+        top: calc(var(--unit-px) * 23);
+        left: calc(var(--unit-prc) * 1);
+    }
+}
+
+/** Body content */
+@media all and (min-width: 375px) {
+    .list__item {
+        position: relative;
+
+        color: var(--secondary-text-color);
+        border-bottom: 1px solid var(--util-text-color);
+        font-size: calc(var(--unit-px) * 3);
+        padding-bottom: calc(var(--unit-px) * 3);
+        margin-bottom: calc(var(--unit-px) * 3);
+    }
+
+    .list__item label {
+        display: inline-block;
+    }
+
+    .item--expand {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: calc(var(--unit-px));
+    }
+}
+
+
+
+/**
+
+    DESKTOP
+
+*/
+
+
+
+/** Illustration */
+@media all and (min-width: 1100px) {
+    .body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .body__base-image {
+        position: static;
+    }
+
+    .body__content {
+        margin-top: 0;
+    }
+}
