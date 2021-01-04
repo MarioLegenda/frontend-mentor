@@ -16,20 +16,83 @@
 </head>
 <body>
 
-<main class="main">
+<main class="main  light-theme">
   <div class="main-content">
 
     <div class="tabs-content__header">
       <h1 class="header--header">TODO</h1>
-      <a  class="header--link" href=""><img src="../images/icon-moon.svg" /></a>
+        <img id="themeChange" data-next="dark-theme" src="../images/icon-sun.svg" alt="theme-change" class="header--link" />
     </div>
 
     <div class="form">
 
-      <div class="field">
-        <div class="field--circle"></div>
+      <div class="field  field--individual">
+        <div class="field--pending"></div>
 
         <input type="text" class="field--input" placeholder="Create a new todo..."/>
+      </div>
+
+      <div class="field-group">
+        <div class="field  field--individual">
+          <div class="field--pending"></div>
+
+          <p class="field--text">Complete online Javascript course</p>
+
+          <img class="field--action" src="../images/icon-cross.svg" alt="Remove" />
+        </div>
+
+        <div class="field  field--individual">
+          <div class="field--pending"></div>
+
+          <p class="field--text">Jog around the park 3X</p>
+
+          <img class="field--action" src="../images/icon-cross.svg" alt="Remove" />
+        </div>
+
+        <div class="field  field--individual">
+          <div class="field--pending"></div>
+
+          <p class="field--text">10 minutes meditation</p>
+
+          <img class="field--action" src="../images/icon-cross.svg" alt="Remove" />
+        </div>
+
+        <div class="field  field--individual">
+          <div class="field--pending"></div>
+
+          <p class="field--text">Read for 1 hour</p>
+
+          <img class="field--action" src="../images/icon-cross.svg" alt="Remove" />
+        </div>
+
+        <div class="field  field--individual">
+          <div class="field--pending"></div>
+
+          <p class="field--text">Pick up groceries</p>
+
+          <img class="field--action" src="../images/icon-cross.svg" alt="Remove" />
+        </div>
+
+        <div class="field  field--individual">
+          <div class="field--pending"></div>
+
+          <p class="field--text">Complete TODO app on Frontend Mentor</p>
+
+          <img class="field--action" src="../images/icon-cross.svg" alt="Remove" />
+        </div>
+
+        <div class="field  field--individual">
+          <p class="field--text">5 items left</p>
+          <a href="" class="field--link">Clear completed</a>
+        </div>
+      </div>
+
+      <div class="field  field--individual">
+        <div class="inner-field--center">
+          <a href="" class="field--link">All</a>
+          <a href="" class="field--link">Active</a>
+          <a href="" class="field--link">Completed</a>
+        </div>
       </div>
 
     </div>
@@ -42,5 +105,6 @@
   </div>
 </main>
 
+<script src="script.js"></script>
 </body>
 </html>
